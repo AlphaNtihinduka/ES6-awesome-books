@@ -11,3 +11,15 @@
     text-align: center;
     justify-content: center;
 }
+
+.alert-failure {
+    background-color: red;
+}
+
+.alert-success {
+    background-color: green;
+}
+
+.alert-removed {
+    background-color: yellow;
+}
