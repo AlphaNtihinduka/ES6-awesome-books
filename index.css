@@ -1,0 +1,13 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.awesome-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3;
+    text-align: center;
+    justify-content: center;
+}
