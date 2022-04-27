@@ -32,6 +32,7 @@ class UI {
     setTimeout(() => document.querySelector('.alert').remove(), 1000);
   }
 
+  //removing a book
   static deleteBook(removed) {
     if (removed.classList.contains('remove-btn')) {
       removed.parentElement.parentElement.remove();

@@ -20,7 +20,7 @@ class BookLocalStore {
 
   //     books.forEach((book, index) => {
   //         const books = BookLocalStore.getBooks()
-  //         if(book.tar === author) {
+  //         if(book.author === tar) {
   //             books.splice(index, 1);
   //         }
   //     });
