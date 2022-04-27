@@ -9,7 +9,7 @@ class UI {
   static addBookToList(book) {
     const bookList = document.querySelector('.book-list');
     const bookDetails = document.createElement('div');
-
+    bookDetails.className = 'books'
     bookDetails.innerHTML = `
             <div class ="book-details">
             <span>"${book.title}" by </span>
@@ -24,16 +24,16 @@ class UI {
     const div = document.createElement('div');
     div.className = `alert alert-${className}`;
     div.appendChild(document.createTextNode(message));
-    const formSection = document.querySelector('.form-section');
-    const form = document.querySelector('.books-form');
-    formSection.insertBefore(div, form);
+    const body = document.querySelector('body');
+    const form = document.querySelector('.form-section');
+    body.insertBefore(div, form);
 
     // Vanish in 3 seconds
     setTimeout(() => document.querySelector('.alert').remove(), 1000);
   }
 
   static deleteBook(removed) {
-    if (removed.classList.contains === 'remove-btn') {
+    if (removed.classList.contains('remove-btn')) {
       removed.parentElement.parentElement.remove();
     }
   }
