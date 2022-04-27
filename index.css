@@ -4,12 +4,33 @@
     box-sizing: border-box;
 }
 
-.awesome-wrapper {
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.header {
+    border: 5px solid black;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+    margin: 10px;
+    padding: 10px 30px;
+}
+
+.right-menu {
+    display: flex;
+}
+
+.right-item {
+    padding: 10px;
+    margin-right: 4px;
+}
+
+.form-section {
+    display: none;
     flex-direction: column;
-    gap: 3;
-    text-align: center;
-    justify-content: center;
 }
 
 .alert-failure {
@@ -22,4 +43,21 @@
 
 .alert-removed {
     background-color: yellow;
+}
+
+.books-holder {
+    display: none;
+    flex-direction: column;
+}
+
+.contact-section {
+    display: none;
+    flex-direction: column;
+}
+
+.footer {
+    border: 5px solid black;
+    padding: 10px 30px;
+    margin: 10px;
+    font-size: 20px;
 }

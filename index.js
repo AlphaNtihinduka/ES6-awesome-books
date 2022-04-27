@@ -1,3 +1,7 @@
+import {listHeader, addHeader, contactHeader, formSection, booksHolder, contactSection, bookForm, timeContainer} from './modules/variables.js';
+import UI from './modules/ui.js';
+import BookLocalStore from './modules/localStore.js';
+import displayClock from './modules/clock.js';
 //Book class: represents a class
 class Book {
     constructor(title, author){
@@ -6,90 +10,10 @@ class Book {
     }
 }
 
-// UI class: Handles all the UI tasks
-
-class UI {
-    static displayBooks(){
-    const books = bookLocalStore.getBooks();
-    books.forEach((book) => UI.addBookToList(book));
-    }
-
-    static addBookToList(book){
-        const bookList = document.querySelector(".book-list");
-        const bookDetails = document.createElement("div");
-
-        bookDetails.innerHTML = `
-            <div class ="book-details">
-            <span>"${book.title}" by </span>
-            <span>${book.author}</span>
-            <span><a href='#' class="remove-btn">Remove</a></span>
-            <div>
-        `
-        bookList.appendChild(bookDetails);
-    }
-
-    static alertMessage(message, className){
-        const div = document.createElement('div');
-        div.className = `alert alert-${className}`;
-        div.appendChild(document.createTextNode(message));
-        const formSection = document.querySelector('.form-section');
-        const form = document.querySelector('.books-form');
-        formSection.insertBefore(div, form);
-    
-        // Vanish in 3 seconds
-        setTimeout(() => document.querySelector('.alert').remove(), 1000);
-
-    }
-
-    static deleteBook(removed){
-            if(removed.classList.contains = "remove-btn") {
-                removed.parentElement.parentElement.remove();
-            }
-    }
-
-    static cleaFields(){
-        document.querySelector(".title").value = "";
-        document.querySelector(".author").value = "";
-    }
-}
-
-//store class: Handles the local storage.
-class BookLocalStore {
-    static getBooks () {
-        let books;
-        if(localStorage.getItem("books") === null) {
-            books =[];
-        } else {
-            books = JSON.parse(localStorage.getItem('books'));
-        }
-        return books
-    }
-
-    static addBook(book) {
-        const books = BookLocalStore.getBooks();
-        books.push(book);
-        localStorage.setItem("books", JSON.stringify(book))
-    }
-
-    static removeBook(title) {
-        const books = BookLocalStore.getBooks();
-
-        books.forEach((book, index)=>{
-            if(book.title === title) {
-                books.splice(index, 1);
-            }
-        });
-
-        localStorage.setItem("books", JSON.stringify(book));
-    }
-}
-
-
 // Event: Display books
 document.addEventListener('DOMContentLoaded', UI.displayBooks);
 
 //Event: Add book
-bookForm = document.querySelector(".books-form");
 bookForm.addEventListener("submit", (e)=>{
     //Grabbing form values
     const title = document.querySelector(".title").value;
@@ -124,3 +48,59 @@ document.querySelector(".book-list").addEventListener("click", (e)=>{
 
 
 })
+
+listHeader.addEventListener("click", ()=>{
+    booksHolder.style.display = "flex";
+    formSection.style.display = "none";
+    contactSection.style.display = "none";
+})
+
+addHeader.addEventListener("click", ()=>{
+    booksHolder.style.display = "none";
+    formSection.style.display = "flex";
+    contactSection.style.display = "none";
+})
+
+contactHeader.addEventListener("click", ()=>{
+    booksHolder.style.display = "none";
+    formSection.style.display = "none";
+    contactSection.style.display = "flex";
+})
+
+// function displayClock() {
+//     const date =  DateTime.now();
+//     const month = date.monthLong;
+//     let days = date.day;
+//     const yrs = date.year;
+//     let hrs = date.hour;
+//     let mins = date.minute;
+//     let secs = date.second
+//     let period = 'AM';
+//     if (hrs === 0) {
+//       hrs = 12;
+//     } else if (hrs > 12) {
+//       hrs -= 12;
+//       period = 'PM';
+//     }
+//     if (days === 1) {
+//       days = `${days}st`;
+//     } else if (days === 2) {
+//       days = `${days}nd`;
+//     } else if (days === 3) {
+//       days = `${days}rd`;
+//     } else {
+//       days = `${days}th`;
+//     }
+//     hrs = hrs < 10 ? `0${hrs}` : hrs;
+//     mins = mins < 10 ? `0${mins}` : mins;
+//     secs = secs < 10 ? `0${secs}` : secs;
+  
+//     const time = `${days}/ ${month} ${yrs} ${hrs}:${mins}:${secs}  ${period}`;
+//     setInterval(displayClock, 1000);
+  
+//     timeContainer.innerHTML = time;
+//   }
+  
+  displayClock();
+  
+
