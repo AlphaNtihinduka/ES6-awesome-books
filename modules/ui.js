@@ -12,7 +12,7 @@ class UI {
     bookDetails.className = 'books'
     bookDetails.innerHTML = `
             <div class ="book-details">
-            <span>"${book.title}" by </span>
+            <span>${book.title}</span>
             <span>${book.author}</span>
             <span><a href='#' class="remove-btn">Remove</a></span>
             <div>
@@ -28,8 +28,8 @@ class UI {
     const form = document.querySelector('.form-section');
     body.insertBefore(div, form);
 
-    // Vanish in 3 seconds
-    setTimeout(() => document.querySelector('.alert').remove(), 1000);
+    // Disappear in 0.5 second
+    setTimeout(() => document.querySelector('.alert').remove(), 500);
   }
 
   //removing a book

@@ -41,13 +41,34 @@ bookForm.addEventListener('submit', (e) => {
     // Prevent page reload
     e.preventDefault();
   }
+
 });
 
 // Event: Remove book
 document.querySelector('.book-list').addEventListener('click', (e) => {
+  const parent = document.querySelector('.book-details');
+  
+  // const title = parent.children[0].textContent;
+  // const author = parent.children[1].textContent;
+
+  // const bookObject = {
+  //   title: title,
+  //   author: author,
+  // };
+  
+  // console.log(bookObject);
+  // console.log(e.target.parentElement.children);
+
+
+  BookLocalStore.removeBook({title:"1", author:"1"});
+
   UI.deleteBook(e.target);
+  
   UI.alertMessage('Successfully Removed', 'removed');
 });
+
+
+
 
 listHeader.addEventListener('click', () => {
   booksHolder.style.display = 'flex';

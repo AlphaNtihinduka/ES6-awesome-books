@@ -1,11 +1,6 @@
 class BookLocalStore {
   static getBooks() {
-    let books;
-    if (localStorage.getItem('books') === null) {
-      books = [];
-    } else {
-      books = JSON.parse(localStorage.getItem('books'));
-    }
+    const books = JSON.parse(localStorage.getItem('books')) || []
     return books;
   }
 
@@ -16,16 +11,26 @@ class BookLocalStore {
   }
 
   // static removeBook(tar) {
-  //     const books = BookLocalStore.getBooks();
-
-  //     books.forEach((book, index) => {
-  //         const books = BookLocalStore.getBooks()
-  //         if(book.author === tar) {
-  //             books.splice(index, 1);
-  //         }
-  //     });
-
-  //     localStorage.setItem("books", JSON.stringify(books));
+  //   console.log(tar)
+  //   let books = BookLocalStore.getBooks();
+  //   let index = books.findIndex((item) => item.title === tar.title && item.author === tar.author);
+  
+  //   books.splice(index, 1);
+  //   localStorage.setItem("books", JSON.stringify(books)); 
   // }
+  static removeBook(tar) {
+        const books = BookLocalStore.getBooks();
+        let found = null;
+        books.forEach((book, index) => {
+          if(book.title ===tar.title && book.author === tar.author) {
+            found = index;
+          }         
+        });
+          if(found != null) {
+            books.splice(found, 1)
+          }
+         localStorage.setItem("books", JSON.stringify(books));
+     }
 }
+
 export default BookLocalStore;
