@@ -12,7 +12,7 @@
 ​
 ## Live Demo (if available)
 
-- 
+- Live Demo: [@Live Demo](https://alphantihinduka.github.io/ES6-awesome-books/?#)
 
 ## Getting Started
 
