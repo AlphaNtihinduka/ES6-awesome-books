@@ -9,13 +9,13 @@ class UI {
   static addBookToList(book) {
     const bookList = document.querySelector('.book-list');
     const bookDetails = document.createElement('div');
-    bookDetails.className = 'books'
+    bookDetails.className = 'books';
     bookDetails.innerHTML = `
             <div class ="book-details">
             <span>${book.title}</span>
             <span>${book.author}</span>
             <span><a href='#' class="remove-btn">Remove</a></span>
-            <div>
+            </div>
         `;
     bookList.appendChild(bookDetails);
   }
@@ -32,7 +32,7 @@ class UI {
     setTimeout(() => document.querySelector('.alert').remove(), 500);
   }
 
-  //removing a book
+  // removing a book
   static deleteBook(removed) {
     if (removed.classList.contains('remove-btn')) {
       removed.parentElement.parentElement.remove();
