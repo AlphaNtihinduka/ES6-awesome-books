@@ -49,7 +49,6 @@ document.querySelector('.book-list').addEventListener('click', (e) => {
   const bookDetElement = btnElement.parentElement.parentElement;
   const title = bookDetElement.children[0].textContent;
   const author = bookDetElement.children[1].textContent;
-
   const bookObject = {
     title,
     author,
