@@ -1,0 +1,153 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.header {
+  border: 5px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30px;
+  margin: 10px;
+  padding: 10px 30px;
+}
+
+.right-menu {
+  display: flex;
+}
+
+.right-item {
+  padding: 10px;
+  margin-right: 4px;
+}
+
+.time-container {
+  position: absolute;
+  right: 10px;
+  font-size: 20px;
+}
+
+.form-section {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  left: 40%;
+  top: 30%;
+}
+
+.awesome-heading {
+  font-size: 40px;
+  font-weight: bold;
+  padding-bottom: 40px;
+}
+
+.input {
+  width: 320px;
+  margin-bottom: 10px;
+  padding: 10px 0 10px 5px;
+  font-size: 20px;
+}
+
+.submit-btn {
+  padding: 5px;
+  position: absolute;
+  right: 0;
+}
+
+.alert {
+  padding: 3px;
+  font-size: 20px;
+  position: absolute;
+  left: 40%;
+  top: 15%;
+  width: 320px;
+  text-align: center;
+}
+
+.alert-failure {
+  background-color: red;
+}
+
+.alert-success {
+  background-color: green;
+}
+
+.alert-removed {
+  background-color: yellow;
+}
+
+.books-holder {
+  display: flex;
+  flex-direction: column;
+}
+
+.all-awesome {
+  position: absolute;
+  left: 45%;
+  top: 20%;
+}
+
+.book-list {
+  justify-content: center;
+  position: absolute;
+  left: 35%;
+  top: 30%;
+  width: 550px;
+}
+
+.remove-btn {
+  position: absolute;
+  right: 10px;
+  border: 1px solid black;
+  background-color: grey;
+}
+
+.book-details {
+  padding: 15px 10px;
+  border: 1px solid black;
+  font-size: 20px;
+}
+
+.contact-section {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  font-size: 18px;
+}
+
+.contact-info {
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.contacts {
+  padding: 20px 0 20px 60px;
+}
+
+.footer-text-container {
+  border: 5px solid black;
+  padding: 10px 30px;
+  margin: 10px;
+  font-size: 25px;
+  bottom: 0;
+  position: absolute;
+  width: 99%;
+}
+
+.fa-copyright {
+  font-size: 15px;
+  padding-left: 10px;
+}

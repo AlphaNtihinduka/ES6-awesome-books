@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <title>Es6 Awesome books</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="left-menu">Awesome Books</div>
+      <div class="right-menu">
+        <a href="#" class="list right-item">List <span class="slash">|</span></a>
+        <a href="#" class="add-new right-item">Add new <span class="slash">|</span></a>
+        <a href="#" class="contact right-item">Contact <span class="slash">|</span></a>
+      </div>
+    </header>
+    <div class="time-container">
+    </div>
+    <section class="form-section">
+      <h2 class="awesome-heading">Add a new book</h2>
+      <div class="success"></div>
+      <div class="failure"></div>
+      <form action="#" class="books-form">
+        <div class="title-holder">
+          <input type="text" class="title input" placeholder="Enter book title">
+        </div>
+        <div class="author-holder">
+          <input type="text" class="author input" placeholder="Enter book Author">
+        </div>
+        <button type="submit" class="submit-btn">Add</button>
+      </form>
+    </section>
+    <section class="books-holder">
+      <h2 class="all-awesome">All Awesome Books</h2>
+        <div class="book-list"></div>
+    </section>
+
+    <div class="contact-section">
+      <h2 class="contact-info">Contact Information</h2>
+      <p class="inquiry">Do you have any question or you just want to say "hello"? <br>You can reach out to us!</p>
+      <ul class="contacts">
+        <li class="email">Our e-mail: mail@mail.com</li>
+        <li class="email">Our phone number: 004426718003</li>
+        <li class="email">Our address: Streetname 22, 84503 City, Country.</li>
+      </ul>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-text-container">
+      <span><strong>Copyright</strong><i class="far fa-copyright"></i> Some rights reserved by Alpha, 2022</span>
+       </div>
+    </footer>
+  <script src="index.js" type="module"></script>
+  </body>
+</html>
